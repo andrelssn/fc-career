@@ -2,5 +2,11 @@
 }
 
 body {
-  background: #0f0e17 !important;
+  background: #09080e !important;
+}
+
+:root {
+  --orange:         #ff8906;
+  --orange2:        #f25f4c;
+  --text-secondary: #a7a9be;
 }

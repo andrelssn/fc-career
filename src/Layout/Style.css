@@ -1,0 +1,7 @@
+.header-style {
+    display: flex !important;
+    justify-content: right !important;
+    padding: 15px 40px !important;
+    background-color: #0f0e17 !important;
+    box-shadow: none !important;
+}
