@@ -1,12 +1,18 @@
-.App {
+@font-face {
+  	font-family: 'unageo';
+  	src: local('unageo'), url('fonts/Unageo-Regular.ttf') format('truetype');
+}
+
+* {
+	font-family: 'unageo', sans-serif !important;
 }
 
 body {
-  background: #09080e !important;
+  	background: #09080e !important;
 }
 
 :root {
-  --orange:         #ff8906;
-  --orange2:        #f25f4c;
-  --text-secondary: #a7a9be;
+  	--orange:         #ff8906;
+  	--orange2:        #f25f4c;
+  	--text-secondary: #a7a9be;
 }

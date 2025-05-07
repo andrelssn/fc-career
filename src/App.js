@@ -5,9 +5,9 @@ import Layout from "./Layout/Layout";
 
 function App() {
     return (
-        <div className="App">
+        <body className="App">
             <Layout/>
-        </div>
+        </body>
     );
 }
 

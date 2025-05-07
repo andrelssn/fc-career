@@ -19,7 +19,7 @@ export default function Header() {
             <Box display={"inline-flex"} justifyContent={"right"} alignItems={"center"}>
                 <Box position={"absolute"} left={30}>
                     <Typography variant="h5" display={"flex"} alignItems={"center"}>
-                        <img src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
+                        <img alt="logo" src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
                         <span>FC Career Generator</span>
                     </Typography>
                 </Box>
@@ -29,14 +29,14 @@ export default function Header() {
                     onChange={handleChange}
                     sx={{
                         '& .MuiTabs-indicator': {
-                            backgroundColor: 'var(--orange)', // Cor do indicador
+                            backgroundColor: 'var(--orange) !important', // Cor do indicador
                         },
                         '& .MuiTab-root': {
-                            color: 'var(--text-secondary)', // Cor do texto das abas
+                            color: 'var(--text-secondary) !important', // Cor do texto das abas
                             fontWeight: 'bold',
                         },
                         '& .Mui-selected': {
-                            color: 'var(--orange)', // Cor da aba selecionada
+                            color: 'var(--orange) !important', // Cor da aba selecionada
                         },
                     }}
                 >
