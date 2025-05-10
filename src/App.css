@@ -12,7 +12,9 @@ body {
 }
 
 :root {
+	--theme:		  #0f0e17;
   	--orange:         #ff8906;
   	--orange2:        #f25f4c;
+	--text: 		  #cecece;
   	--text-secondary: #a7a9be;
 }

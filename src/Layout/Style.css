@@ -1,7 +1,15 @@
 .header-style {
-    display: flex !important;
-    justify-content: right !important;
-    padding: 15px 40px !important;
-    background-color: #0f0e17 !important;
+    padding: 15px !important;
+    background-color: var(--theme)!important;
     box-shadow: none !important;
+}
+
+.page-style {
+    display: flex !important;
+    position: relative !important;
+    justify-self: center !important;
+    width: 90%;
+    color: var(--text) !important;
+    margin-top: 7% !important;
+    background-color: var(--theme) !important;
 }

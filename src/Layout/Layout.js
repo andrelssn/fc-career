@@ -1,3 +1,7 @@
+import { Paper } from "@mui/material";
+
+// Styles
+import "./Style.css";
 
 // Components
 import MainRouter from "../Router/MainRouter";
@@ -9,7 +13,9 @@ export default function Layout() {
         <main>
             <Header/>
 
-            <MainRouter/>
+            <Paper className="page-style">
+                <MainRouter/>
+            </Paper>
         </main>
     );
 };
