@@ -1,4 +1,6 @@
+import React from "react";
 import { Paper } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
 
 // Styles
 import "./Style.css";
@@ -6,16 +8,24 @@ import "./Style.css";
 // Components
 import MainRouter from "../Router/MainRouter";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout() {
+    const [page, setPage] = React.useState("/");
 
     return (
-        <main>
-            <Header/>
+        <div className="app-container">
+            <main className="main-content">
+                <Header page={page} setPage={setPage}/>
 
-            <Paper className="page-style">
-                <MainRouter/>
-            </Paper>
-        </main>
+                <Paper className="page-style">
+                    <BrowserRouter>
+                        <MainRouter page={page}/>
+                    </BrowserRouter>
+                </Paper>
+
+                <Footer/>
+            </main>
+        </div>
     );
 };

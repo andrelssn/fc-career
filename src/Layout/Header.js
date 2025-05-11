@@ -1,4 +1,3 @@
-import React from "react";
 import { AppBar, Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 
 // img
@@ -7,23 +6,24 @@ import img from "../Images/Logo/futebol (1).png";
 // Styles
 import "./Style.css";
 
-export default function Header() {
-    const [value, setValue] = React.useState(0);
+export default function Header({ page, setPage }) {
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        setPage(newValue);
     };
 
     return (
         <AppBar className="header-style">
-            <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
+            <Box display={"grid"}>
                 <Typography variant="h5" display={"flex"} alignItems={"center"} justifyContent={"center"}>
                     <img alt="logo" src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
                     <span>FC Career Generator</span>
                 </Typography>
 
+                <Divider sx={{ bgcolor: "#09080e", mt: 2 }}/>
+
                 <Tabs
-                    value={value}
+                    value={page}
                     onChange={handleChange}
                     variant="scrollable"
                     scrollButtons="auto"
@@ -38,11 +38,12 @@ export default function Header() {
                         '& .Mui-selected': {
                             color: 'var(--orange) !important', // Cor da aba selecionada
                         },
+                        margin: "auto"
                     }}
                 >
-                    <Tab label="Página Inicial" sx={{ fontSize: 12 }}/>
-                    <Tab label="Gerador" sx={{ fontSize: 12 }}/>
-                    <Tab label="Informações" sx={{ fontSize: 12 }}/>
+                    <Tab label="Página Inicial" value={"/"} sx={{ fontSize: 12 }}/>
+                    <Tab label="Gerador" value={"generator"} sx={{ fontSize: 12 }}/>
+                    <Tab label="Informações" value={"information"} sx={{ fontSize: 12 }}/>
                 </Tabs>
             </Box>
         </AppBar>
