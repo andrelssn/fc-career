@@ -7,14 +7,18 @@
 	font-family: 'unageo', sans-serif !important;
 }
 
-body {
+html, body, #root {
+	height: 100%;
+	margin: 0;
   	background: #09080e !important;
 }
 
 :root {
-	--theme:		  #0f0e17;
+	--theme:		  #282635;
   	--orange:         #ff8906;
   	--orange2:        #f25f4c;
-	--text: 		  #cecece;
+	--tertiary: 	  #e53170;
+	--headline:		  #fffffe;
+	--text: 		  #ececec;
   	--text-secondary: #a7a9be;
 }

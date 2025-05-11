@@ -1,14 +1,20 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes, useNavigate } from "react-router-dom";
 
 // Components
 import Home from "../Views/Home/Home";
+import React from "react";
 
-export default function MainRouter() {
+export default function MainRouter({ page }) {
+
+    const navigate = useNavigate();
+
+    React.useEffect(() => {
+        navigate(page);
+    }, [page]);
+
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
             </Routes>
-        </BrowserRouter>
     );
 };
