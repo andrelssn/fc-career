@@ -1,5 +1,4 @@
 .header-style {
-    padding-top: 15px !important;
     background-color: var(--theme)!important;
     box-shadow: none !important;
 }
@@ -19,7 +18,7 @@
 .page-style {
     flex: 1;
     margin: auto !important;
-    margin-bottom: 20vh !important;
+    margin-bottom: 6% !important;
     width: 90%;
     color: var(--text) !important;
     margin-top: 20vh !important;
@@ -33,4 +32,10 @@
     font-size: 0.875rem;
     background-color: var(--theme) !important;
     color: var(--text-secondary);
+}
+
+.header-drawer-style {
+    width: 250px;
+    height: 100%;
+    background-color: var(--theme);
 }
