@@ -15,6 +15,7 @@ html, body, #root {
 
 :root {
 	--theme:		  #282635;
+	--theme-dark:	  #1b1a24;
   	--orange:         #ff8906;
   	--orange2:        #f25f4c;
 	--tertiary: 	  #e53170;
