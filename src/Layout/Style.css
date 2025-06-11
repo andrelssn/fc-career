@@ -1,6 +1,7 @@
 .header-style {
     background-color: var(--theme)!important;
     box-shadow: none !important;
+    background-color: #252525bb !important;
 }
 
 .app-container {
@@ -26,16 +27,30 @@
 }
 
 .footer {
-    height: 70px !important;
+    height: 80px !important;
     text-align: center;
     padding: 1rem;
     font-size: 0.875rem;
-    background-color: var(--theme) !important;
-    color: var(--text-secondary);
+    background-color: #0f0f0f !important;
+    color: #3a3a3a;
 }
 
 .header-drawer-style {
     width: 250px;
     height: 100%;
-    background-color: var(--theme);
+    background: linear-gradient(to right, var(--theme), #272727)  !important;
+}
+
+.header-menu-item {
+    color: var(--text) !important;
+}
+
+.header-menu-item:active {
+    color: var(--text) !important;
+    background-color: var(--theme-dark) !important;
+}
+
+.selected-page-item {
+    color: var(--text) !important;
+    background: linear-gradient(var(--orange2), var(--orange))  !important;
 }
