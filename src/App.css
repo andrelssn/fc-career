@@ -10,12 +10,12 @@
 html, body, #root {
 	height: 100%;
 	margin: 0;
-  	background: #09080e !important;
+  	background: #111111 !important;
 }
 
 :root {
-	--theme:		  #282635;
-	--theme-dark:	  #1b1a24;
+	--theme:		  #303030;
+	--theme-dark:	  #1b1b1b;
   	--orange:         #ff8906;
   	--orange2:        #f25f4c;
 	--tertiary: 	  #e53170;

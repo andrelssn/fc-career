@@ -1,6 +1,7 @@
 import React from "react";
-import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Typography, useMediaQuery, useTheme } from "@mui/material";
 
+// Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
@@ -11,6 +12,9 @@ import img from "../Images/Logo/futebol (1).png";
 
 // Styles
 import "./Style.css";
+
+// Components
+import { menuList } from "./Menu/MenuItem";
 
 export default function Header({ page, setPage }) {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -25,8 +29,6 @@ export default function Header({ page, setPage }) {
         setPage(newValue);
     };
 
-    console.log(page);
-
     const drawer = (
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
             <Box
@@ -36,38 +38,20 @@ export default function Header({ page, setPage }) {
                 onKeyDown={toggleDrawer(false)}
             >
                 <List>
-                    <ListItemButton onClick={() => handleChange('', '/')}>
-                        <ListItemIcon sx={ page === '/' ? { color: "var(--orange)" } : { color: "var(--text)" }}>
-                            <HomeIcon/>
-                        </ListItemIcon>
+                    { menuList.map((item) => {
+                        return (
+                            <ListItemButton
+                                onClick={() => handleChange('', item.route)}
+                                className={page === item.route ? "selected-page-item" : "header-menu-item"}
+                            >
+                                <ListItemIcon sx={{ color: "var(--text)" }}>
+                                    <item.icon/>
+                                </ListItemIcon>
 
-                        <ListItemText
-                            primary={"Página Inicial"}
-                            sx={ page === '/' ? { color: "var(--orange)" } : { color: "var(--text)" }}
-                        />
-                    </ListItemButton>
-
-                    <ListItemButton onClick={() => handleChange('', 'generator')}>
-                        <ListItemIcon sx={{ color: "var(--text)" }}>
-                            <AutoAwesomeIcon/>
-                        </ListItemIcon>
-
-                        <ListItemText
-                            primary={"Gerador"}
-                            sx={{ color: "var(--text)" }}
-                        />
-                    </ListItemButton>
-
-                      <ListItemButton onClick={() => handleChange('', 'information')}>
-                        <ListItemIcon sx={{ color: "var(--text)" }}>
-                            <InfoIcon/>
-                        </ListItemIcon>
-
-                        <ListItemText
-                            primary={"Informações"}
-                            sx={{ color: "var(--text)" }}
-                        />
-                    </ListItemButton>
+                                <ListItemText primary={item.label}/>
+                            </ListItemButton>
+                        );
+                    })}
                 </List>
             </Box>
         </Drawer>
@@ -92,7 +76,7 @@ export default function Header({ page, setPage }) {
                     </Typography>
                 </Box>
             ) : (
-                <Box display={"flex"} justifyContent={"space-between"} p={"10px 20px"}>
+                <Box display={"flex"} justifyContent={"space-between"} p={"0px 20px"}>
                     <Typography variant="h5" display={"flex"} alignItems={"center"} justifyContent={"center"}>
                         <img alt="logo" src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
                         <span>FC Career Generator</span>
@@ -116,9 +100,9 @@ export default function Header({ page, setPage }) {
                             },
                         }}
                     >
-                        <Tab label="Página Inicial" value={"/"} sx={{ fontSize: 12 }}/>
-                        <Tab label="Gerador" value={"generator"} sx={{ fontSize: 12 }}/>
-                        <Tab label="Informações" value={"information"} sx={{ fontSize: 12 }}/>
+                        <Tab label="Página Inicial" value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                        <Tab label="Gerador" value={"generator"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                        <Tab label="Informações" value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                     </Tabs>
                 </Box>
             )}
