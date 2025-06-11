@@ -1,7 +1,11 @@
-import React from "react";
-import { AppBar, Box, Divider, LinearProgress, Tab, Tabs, Typography } from "@mui/material";
+import { Box, LinearProgress, Typography } from "@mui/material";
 
+// Style
 import "./Style.css";
+
+// Img
+import fc25 from "../../Images/fc/fc25.png";
+
 
 // import { getData } from "../../Services/Api";
 
@@ -33,7 +37,7 @@ export default function Home() {
             />
 
             <article className="article-style">
-                <span>Você é aquele jogador de FC modo carreira e cansou de tentar ideias novas?</span><br/>
+                <span>Você é aquele jogador de FC modo carreira que cansou de tentar ideias novas?</span><br/>
                 <span>Então está no lugar certo!</span>
 
                 <p>
@@ -64,10 +68,7 @@ export default function Home() {
                 />
 
                 <div>
-                    <ul>
-                        <li>FC 24 (in development)</li>
-                        <li>FC 25</li>
-                    </ul>
+                    <img alt="fc25" title="fc25" src={fc25} style={{ width: 260 }}/>
                 </div>
             </Box>
 

@@ -1,7 +1,8 @@
 .header-style {
-    background-color: var(--theme)!important;
+    background-color: #11111193 !important;
+    border-bottom: 1px solid var(--theme-dark);
+    backdrop-filter: blur(10px);
     box-shadow: none !important;
-    background-color: #252525bb !important;
 }
 
 .app-container {
@@ -23,7 +24,7 @@
     width: 90%;
     color: var(--text) !important;
     margin-top: 20vh !important;
-    background-color: var(--theme) !important;
+    background: linear-gradient(var(--theme), var(--theme-dark)) !important;
 }
 
 .footer {
@@ -31,14 +32,13 @@
     text-align: center;
     padding: 1rem;
     font-size: 0.875rem;
-    background-color: #0f0f0f !important;
     color: #3a3a3a;
 }
 
 .header-drawer-style {
     width: 250px;
     height: 100%;
-    background: linear-gradient(to right, var(--theme), #272727)  !important;
+    background-color: var(--background) !important;
 }
 
 .header-menu-item {
