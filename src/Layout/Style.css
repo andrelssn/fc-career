@@ -20,10 +20,10 @@
 .page-style {
     flex: 1;
     margin: auto !important;
-    margin-bottom: 6% !important;
-    width: 90%;
+    margin-bottom: 10dvh !important;
+    width: 97%;
     color: var(--text) !important;
-    margin-top: 20vh !important;
+    margin-top: 12vh !important;
     background: linear-gradient(var(--theme), var(--theme-dark)) !important;
 }
 
