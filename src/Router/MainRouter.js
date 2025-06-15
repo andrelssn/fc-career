@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Router, Routes, useNavigate } from "react-router-
 
 // Components
 import Home from "../Views/Home/Home";
+import Career from "../Views/Career/Career";
 import React from "react";
 
 export default function MainRouter({ page }) {
@@ -15,6 +16,7 @@ export default function MainRouter({ page }) {
     return (
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/career" element={<Career/>}/>
             </Routes>
     );
 };

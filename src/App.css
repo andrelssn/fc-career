@@ -24,3 +24,13 @@ html, body, #root {
 	--text: 		  #ececec;
   	--text-secondary: #a7a9be;
 }
+
+.global-btn-style {
+	color: var(--text) !important;
+	background: var(--orange) !important;
+}
+
+.global-btn-style:hover {
+	color: var(--text) !important;
+	background-color: #ad610a !important;
+}

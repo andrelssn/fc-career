@@ -72,14 +72,14 @@ export default function Header({ page, setPage }) {
 
                     <Typography variant="h5" display={"flex"} alignItems={"center"} justifyContent={"center"} ml={1}>
                         <img alt="logo" src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
-                        <span>FC Career Generator</span>
+                        <span style={{ fontStyle: "italic", fontWeight: "bold", color: "var(--text)" }}>FC Career</span>
                     </Typography>
                 </Box>
             ) : (
                 <Box display={"flex"} justifyContent={"space-between"} p={"0px 20px"}>
                     <Typography variant="h5" display={"flex"} alignItems={"center"} justifyContent={"center"}>
                         <img alt="logo" src={img} style={{ width: 40, height: 40, marginRight: 10 }}/>
-                        <span>FC Career Generator</span>
+                        <span style={{ fontStyle: "italic", fontWeight: "bold", color: "var(--text)"  }}>FC Career</span>
                     </Typography>
 
                     <Tabs
@@ -101,7 +101,7 @@ export default function Header({ page, setPage }) {
                         }}
                     >
                         <Tab label="Página Inicial" value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                        <Tab label="Gerador" value={"generator"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                        <Tab label="Carreira" value={"career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                         <Tab label="Informações" value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                     </Tabs>
                 </Box>

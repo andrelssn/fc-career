@@ -4,7 +4,7 @@ import { Box, LinearProgress, Typography } from "@mui/material";
 import "./Style.css";
 
 // Img
-import fc25 from "../../Images/fc/fc25.png";
+import fc25 from "../../Images/fc/fc25white.png";
 
 
 // import { getData } from "../../Services/Api";
@@ -41,7 +41,7 @@ export default function Home() {
                 <span>Então está no lugar certo!</span>
 
                 <p>
-                    Com o <span style={{ fontWeight: "bold" }}>FC Career Generator</span> você poderá gerar uma ideia de modo carreira, no qual poderá selecionar a liga e equipe
+                    Com o <span style={{ fontWeight: "bold" }}>FC Career</span> você poderá gerar uma ideia de modo carreira, no qual poderá selecionar a liga e equipe
                     que deseja jogar, e com base na dificuldade da equipe, você terá objetivos especificos para alcançar na temporada com a mesma.
                 </p>
 
@@ -67,7 +67,7 @@ export default function Home() {
                     }}
                 />
 
-                <div>
+                <div style={{ marginTop: 20 }}>
                     <img alt="fc25" title="fc25" src={fc25} style={{ width: 260 }}/>
                 </div>
             </Box>
