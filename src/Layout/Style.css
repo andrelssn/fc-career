@@ -24,7 +24,9 @@
     width: 97%;
     color: var(--text) !important;
     margin-top: 12vh !important;
-    background: linear-gradient(var(--theme), var(--theme-dark)) !important;
+    background-color: var(--background) !important;
+    border-radius: 0px !important;
+    /* background: linear-gradient(var(--theme), var(--theme-dark)) !important; */
 }
 
 .footer {
