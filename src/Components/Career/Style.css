@@ -1,9 +1,9 @@
 .select-team-container {
     display: grid;
     justify-content: center !important;
+    justify-self: left !important;
     padding: 20px !important;
     margin: 20px;
-    width: 20% !important;
 }
 
 .team-logo-box {
@@ -13,5 +13,14 @@
     width: 250px;
     height: 250px;
     margin-bottom: 30px;
-    background: linear-gradient(#363636, #424242);
+    background: linear-gradient(#383838, #1b1b1b);
+    box-shadow: 0px 0px 7px 0px var(--orange);
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(var(--theme), var(--theme-dark));
+    border-radius: 15px;
 }
