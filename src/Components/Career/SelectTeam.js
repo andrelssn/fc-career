@@ -11,14 +11,16 @@ import { getData, getDataIgm } from "../../Services/Api";
 export default function SelectTeam(props) {
     const {
         apiLeagues,
+        apiTeams,
+        setApiTeams,
+        apiLogo,
+        setApiLogo,
         selectedLeague,
         setSelectedLeague,
         selectedTeam,
-        setSelectedTeam
+        setSelectedTeam,
+        changePage
     } = props;
-
-    const [apiTeams, setApiTeams]             = React.useState(null);
-    const [apiLogo, setApiLogo]               = React.useState(null);
 
     const [loaderTeam, setLoaderTeam]         = React.useState(false);
     const [loaderLogo, setLoaderLogo]         = React.useState(false);
@@ -60,10 +62,10 @@ export default function SelectTeam(props) {
         setLoaderLogo(false);
     };
 
-    if(!apiLeagues) return <CircularProgress/>;
+    console.log(apiLogo)
 
     const optionsLeague = apiLeagues.map((data) => ({ value: data.id, label: data.name, country: data.country, division: data.division, difficulty: data.difficulty }));
-    const optionsTeams  = apiTeams && apiTeams.map((data) => ({ value: data.Id, label: data.Name, city: data.City, stadium: data.Stadium, size: data.Size }));
+    const optionsTeams  = apiTeams && apiTeams.map((data) => ({ value: data.Id, label: data.Name, data: data }));
 
     return (
         <Box className="select-team-container">
@@ -76,10 +78,10 @@ export default function SelectTeam(props) {
                 }
 
                 {!loaderLogo && (
-                    !apiLogo
+                    !selectedLeague || !selectedTeam
                         ? (
                             <Typography textAlign={"center"} color="var(--text-secondary)">
-                                Select Your Team
+                                Selecione um clube
                             </Typography>
                         )
                         : (
@@ -98,11 +100,12 @@ export default function SelectTeam(props) {
                 options={optionsLeague}
                 sx={autoCompleteStyleUser}
                 onChange={(e, v) => getLeagueTeams(v)}
+                defaultValue={selectedLeague}
                 renderInput={(params) =>
                     <TextField
                         {...params}
                         variant="standard"
-                        label="Select League"
+                        label="Selecionar Liga"
                     />
                 }
                 slotProps={{
@@ -125,12 +128,13 @@ export default function SelectTeam(props) {
                             disablePortal
                             options={optionsTeams}
                             sx={autoCompleteStyleUser}
+                            defaultValue={selectedTeam}
                             onChange={(e, v) => getTeamsLogo(v)}
                             renderInput={(params) =>
                                 <TextField
                                     {...params}
                                     variant="standard"
-                                    label="Select Team"
+                                    label="Selecionar Clube"
                                 />
                             }
                             slotProps={{
@@ -146,8 +150,13 @@ export default function SelectTeam(props) {
                 )
             }
 
-            <Button className="global-btn-style" sx={{ mt: 2 }}>
-                Confirm
+            <Button
+                disabled={selectedLeague && selectedTeam !== null ? false : true}
+                className={selectedLeague && selectedTeam !== null ? "global-btn-style" : "global-btn-off-style"}
+                onClick={() => changePage(2)}
+                sx={{ mt: 2 }}
+            >
+                Confirmar
             </Button>
         </Box>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Typography } from "@mui/material";
 
 // Icons
 import MenuIcon from '@mui/icons-material/Menu';
@@ -16,10 +16,8 @@ import "./Style.css";
 // Components
 import { menuList } from "./Menu/MenuItem";
 
-export default function Header({ page, setPage }) {
+export default function Header({ isMobile, page, setPage }) {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const toggleDrawer = (open) => () => {
         setDrawerOpen(open);

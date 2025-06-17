@@ -7,10 +7,20 @@
 	font-family: 'unageo', sans-serif !important;
 }
 
-html, body, #root {
-	height: 100%;
-	margin: 0;
-  	background: #111111 !important;
+@media (max-width: 768px) {
+	html, body, #root {
+		height: 100%;
+		background-image: url('./Images/fifa15.jpg');
+	}
+}
+
+@media (min-width: 768px) {
+	html, body, #root {
+		height: 100%;
+		margin: 0;
+		background-image: url('./Images/fifa15.jpg');
+		background-size: cover;
+	}
 }
 
 :root {
@@ -33,4 +43,9 @@ html, body, #root {
 .global-btn-style:hover {
 	color: var(--text) !important;
 	background-color: #ad610a !important;
+}
+
+.global-btn-off-style {
+	color: var(--text) !important;
+	background: var(--theme) !important;
 }
