@@ -10,13 +10,13 @@ import MainRouter from "../Router/MainRouter";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function Layout() {
+export default function Layout({ isMobile }) {
     const [page, setPage] = React.useState("/");
 
     return (
         <div className="app-container">
             <main className="main-content">
-                <Header page={page} setPage={setPage}/>
+                <Header isMobile={isMobile} page={page} setPage={setPage}/>
 
                 <Paper className="page-style">
                     <BrowserRouter>
