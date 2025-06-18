@@ -90,7 +90,12 @@ export default function Career() {
             { page === 2
                 ?  <Fade in={true}>
                     <section style={{ display: "flex", marginTop: 20, height: 500 }}>
-                        <CareerDetails changePage={changePage}/>
+                        <CareerDetails
+                            changePage={changePage}
+                            selectedLeague={selectedLeague}
+                            selectedTeam={selectedTeam}
+                            apiLogo={apiLogo}
+                        />
                     </section>
                 </Fade>
                 : <></>
