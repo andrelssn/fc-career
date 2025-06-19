@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, IconButton } from "@mui/material";
 
+// Style
+import "./Style.css";
+
 // Icon
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 

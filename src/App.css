@@ -9,8 +9,11 @@
 
 @media (max-width: 768px) {
 	html, body, #root {
-		height: 100%;
 		background-image: url('./Images/fifa15.jpg');
+		background-repeat: no-repeat;     /* Não repete a imagem */
+		background-attachment: fixed;     /* Fixa a imagem na tela */
+		background-size: cover;           /* Faz a imagem cobrir toda a tela */
+		background-position: center;      /* Centraliza a imagem */
 	}
 }
 
@@ -19,7 +22,10 @@
 		height: 100%;
 		margin: 0;
 		background-image: url('./Images/fifa15.jpg');
-		background-size: cover;
+		background-repeat: no-repeat;     /* Não repete a imagem */
+		background-attachment: fixed;     /* Fixa a imagem na tela */
+		background-size: cover;           /* Faz a imagem cobrir toda a tela */
+		background-position: center;      /* Centraliza a imagem */
 	}
 }
 

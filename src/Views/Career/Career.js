@@ -66,7 +66,7 @@ export default function Career() {
             />
 
             { page === 1
-                ?  <section style={{ display: "flex", marginTop: 20, height: 500 }}>
+                ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
                     <SelectTeam
                         apiLeagues={apiLeagues}
                         apiTeams={apiTeams}
