@@ -1,9 +1,6 @@
 .select-team-container {
     display: grid;
-    justify-content: center !important;
-    justify-self: left !important;
-    padding: 20px !important;
-    margin: 20px;
+    padding: 20px 40px !important;
 }
 
 .team-logo-box {
@@ -18,6 +15,7 @@
 }
 
 .about-container {
+    flex: 1 !important;
     position: relative;
     width: 100%;
     padding: 20px;

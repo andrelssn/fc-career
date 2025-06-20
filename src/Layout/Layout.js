@@ -15,17 +15,17 @@ export default function Layout({ isMobile }) {
 
     return (
         <div className="app-container">
-            <main className="main-content">
-                <Header isMobile={isMobile} page={page} setPage={setPage}/>
+            <Header isMobile={isMobile} page={page} setPage={setPage}/>
 
+            <main className="main-content">
                 <Paper className="page-style">
                     <BrowserRouter>
                         <MainRouter page={page}/>
                     </BrowserRouter>
                 </Paper>
-
-                <Footer/>
             </main>
+
+            {/* <Footer/> */}
         </div>
     );
 };

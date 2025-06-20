@@ -62,8 +62,6 @@ export default function SelectTeam(props) {
         setLoaderLogo(false);
     };
 
-    console.log(apiLogo)
-
     const optionsLeague = apiLeagues.map((data) => ({ value: data.id, label: data.name, country: data.country, division: data.division, difficulty: data.difficulty }));
     const optionsTeams  = apiTeams && apiTeams.map((data) => ({ value: data.Id, label: data.Name, data: data }));
 
@@ -95,60 +93,62 @@ export default function SelectTeam(props) {
                 }
             </Box>
 
-            <Autocomplete
-                disablePortal
-                options={optionsLeague}
-                sx={autoCompleteStyleUser}
-                onChange={(e, v) => getLeagueTeams(v)}
-                defaultValue={selectedLeague}
-                renderInput={(params) =>
-                    <TextField
-                        {...params}
-                        variant="standard"
-                        label="Selecionar Liga"
-                    />
-                }
-                slotProps={{
-                    clearIndicator: {
-                        sx: {
-                            color: 'var(--text)'
-                        },
-                    },
-                }}
-            />
-
-            <br/>
-
-            { loaderTeam && ( <LinearProgress sx={{ color: "var(--orange)", height: 2 }}/> ) }
-
-            { !loaderTeam && (
-                selectedLeague &&
-                    ( <Fade in={true}>
-                        <Autocomplete
-                            disablePortal
-                            options={optionsTeams}
-                            sx={autoCompleteStyleUser}
-                            defaultValue={selectedTeam}
-                            onChange={(e, v) => getTeamsLogo(v)}
-                            renderInput={(params) =>
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    label="Selecionar Clube"
-                                />
-                            }
-                            slotProps={{
-                                clearIndicator: {
-                                    sx: {
-                                        color: 'var(--text)'
-                                    },
-                                },
-                            }}
+            <Box sx={{ height: 120 }}>
+                <Autocomplete
+                    disablePortal
+                    options={optionsLeague}
+                    sx={autoCompleteStyleUser}
+                    onChange={(e, v) => getLeagueTeams(v)}
+                    defaultValue={selectedLeague}
+                    renderInput={(params) =>
+                        <TextField
+                            {...params}
+                            variant="standard"
+                            label="Selecionar Liga"
                         />
-                    </Fade>
+                    }
+                    slotProps={{
+                        clearIndicator: {
+                            sx: {
+                                color: 'var(--text)'
+                            },
+                        },
+                    }}
+                />
+
+                <br/>
+
+                { loaderTeam && ( <LinearProgress sx={{ color: "var(--orange)", height: 2 }}/> ) }
+
+                { !loaderTeam && (
+                    selectedLeague &&
+                        ( <Fade in={true}>
+                            <Autocomplete
+                                disablePortal
+                                options={optionsTeams}
+                                sx={autoCompleteStyleUser}
+                                defaultValue={selectedTeam}
+                                onChange={(e, v) => getTeamsLogo(v)}
+                                renderInput={(params) =>
+                                    <TextField
+                                        {...params}
+                                        variant="standard"
+                                        label="Selecionar Clube"
+                                    />
+                                }
+                                slotProps={{
+                                    clearIndicator: {
+                                        sx: {
+                                            color: 'var(--text)'
+                                        },
+                                    },
+                                }}
+                            />
+                        </Fade>
+                        )
                     )
-                )
-            }
+                }
+            </Box>
 
             <Button
                 disabled={selectedLeague && selectedTeam !== null ? false : true}
