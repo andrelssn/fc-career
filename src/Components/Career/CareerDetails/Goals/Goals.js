@@ -9,19 +9,11 @@ export default function Goals({ apiDetails }) {
             <TableContainer className="table-goals">
                 <Table size="small">
                     <TableHead>
-                        <TableCell
-                            sx={{
-                                color: "var(--text-secondary)"
-                            }}
-                        >
+                        <TableCell sx={{ color: "var(--text-secondary)" }}>
                             Goal
                         </TableCell>
 
-                        <TableCell
-                            sx={{
-                                color: "var(--text-secondary)"
-                            }}
-                        >
+                        <TableCell sx={{ color: "var(--text-secondary)" }}>
                             Difficulty
                         </TableCell>
                     </TableHead>

@@ -19,6 +19,9 @@ import { getData } from "../../../Services/Api";
 
 // Components
 import Goals from "./Goals/Goals";
+import Achievements from "./Achievements/Achievements";
+import Records from "./Records/Records";
+import ToWin from "./ToWin/ToWin";
 
 export default function CareerDetails(props) {
     const {
@@ -42,8 +45,6 @@ export default function CareerDetails(props) {
             }
         })
     }, []);
-
-    console.log(apiDetails);
 
     return (
         <Box className="career-details-container">
@@ -112,23 +113,50 @@ export default function CareerDetails(props) {
                                 <Goals apiDetails={apiDetails}/>
                             </Collapse>
 
-                            <Button className="global-btn-style" fullWidth sx={{ fontSize: 18, mt: 2 }}>
+                            <Button
+                                className="global-btn-style"
+                                fullWidth
+                                sx={{ fontSize: 18, mt: 2 }}
+                                onClick={() => setOpenAchievements(!openAchievements)}
+                            >
                                 <EmojiEventsIcon sx={{ mr: 1 }}/>
                                 <span>Títulos</span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 
-                            <Button className="global-btn-style" fullWidth sx={{ fontSize: 18, mt: 2 }}>
+                            <Collapse in={openAchievements}>
+                                <Achievements apiDetails={apiDetails}/>
+                            </Collapse>
+
+                            <Button
+                                className="global-btn-style"
+                                fullWidth
+                                sx={{ fontSize: 18, mt: 2 }}
+                                onClick={() => setOpenRecords(!openRecords)}
+                            >
                                 <StarIcon sx={{ mr: 1 }}/>
                                 <span>Recordes</span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 
-                            <Button className="global-btn-style" fullWidth sx={{ fontSize: 18, mt: 2 }}>
+                            <Collapse in={openRecords}>
+                                <Records apiDetails={apiDetails}/>
+                            </Collapse>
+
+                            <Button
+                                className="global-btn-style"
+                                fullWidth
+                                sx={{ fontSize: 18, mt: 2 }}
+                                onClick={() => setOpenToWin(!openToWin)}
+                            >
                                 <HistoryToggleOffIcon sx={{ mr: 1 }}/>
                                 <span>A vencer</span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
+
+                            <Collapse in={openToWin}>
+                                <ToWin apiDetails={apiDetails}/>
+                            </Collapse>
                         </Box>
                     )
                 }
