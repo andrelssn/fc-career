@@ -1,7 +1,4 @@
-import React from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
-
-import f15 from './Images/fifa15.jpg';
 
 // Style
 import "./App.css";
