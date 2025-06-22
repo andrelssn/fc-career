@@ -8,7 +8,7 @@ import "./Style.css";
 // Components
 import MainRouter from "../Router/MainRouter";
 import Header from "./Header";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 export default function Layout({ isMobile }) {
     const [page, setPage] = React.useState("/");
