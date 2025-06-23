@@ -34,72 +34,76 @@ export default function Career() {
     }
 
     if (!apiLeagues) return (
-        <main className="career-container">
-            <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
+        <Fade in={true}>
+            <main className="career-container">
+                <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
 
-            <LinearProgress
-                sx={{
-                    height: "1px",
-                    backgroundColor: 'var(--background)',
-                    '& .MuiLinearProgress-bar': {
-                        backgroundColor: 'var(--orange)'
-                    },
-                    mt: "15px"
-                }}
-            />
-        </main>
+                <LinearProgress
+                    sx={{
+                        height: "1px",
+                        backgroundColor: 'var(--background)',
+                        '& .MuiLinearProgress-bar': {
+                            backgroundColor: 'var(--orange)'
+                        },
+                        mt: "15px"
+                    }}
+                />
+            </main>
+        </Fade>
     );
 
     return (
-        <main className="career-container">
-            <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
+        <Fade in={true}>
+            <main className="career-container">
+                <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
 
-            <LinearProgress
-                sx={{
-                    height: "1px",
-                    backgroundColor: 'var(--orange)',
-                    '& .MuiLinearProgress-bar': {
-                        backgroundColor: '#ec7869'
-                    },
-                    mt: "15px"
-                }}
-            />
+                <LinearProgress
+                    sx={{
+                        height: "1px",
+                        backgroundColor: 'var(--orange)',
+                        '& .MuiLinearProgress-bar': {
+                            backgroundColor: '#ec7869'
+                        },
+                        mt: "15px"
+                    }}
+                />
 
-            { page === 1
-                ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
-                    <SelectTeam
-                        apiLeagues={apiLeagues}
-                        apiTeams={apiTeams}
-                        setApiTeams={setApiTeams}
-                        apiLogo={apiLogo}
-                        setApiLogo={setApiLogo}
-                        selectedLeague={selectedLeague}
-                        setSelectedLeague={setSelectedLeague}
-                        selectedTeam={selectedTeam}
-                        setSelectedTeam={setSelectedTeam}
-                        changePage={changePage}
-                    />
-
-                    <AboutTeam
-                        selectedTeam={selectedTeam}
-                    />
-                </section>
-                : <></>
-            }
-
-            { page === 2
-                ?  <Fade in={true}>
-                    <section style={{ display: "flex", marginTop: 20 }}>
-                        <CareerDetails
-                            changePage={changePage}
-                            selectedLeague={selectedLeague}
-                            selectedTeam={selectedTeam}
+                { page === 1
+                    ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
+                        <SelectTeam
+                            apiLeagues={apiLeagues}
+                            apiTeams={apiTeams}
+                            setApiTeams={setApiTeams}
                             apiLogo={apiLogo}
+                            setApiLogo={setApiLogo}
+                            selectedLeague={selectedLeague}
+                            setSelectedLeague={setSelectedLeague}
+                            selectedTeam={selectedTeam}
+                            setSelectedTeam={setSelectedTeam}
+                            changePage={changePage}
+                        />
+
+                        <AboutTeam
+                            selectedTeam={selectedTeam}
                         />
                     </section>
-                </Fade>
-                : <></>
-            }
-        </main>
+                    : <></>
+                }
+
+                { page === 2
+                    ?  <Fade in={true}>
+                        <section style={{ display: "flex", marginTop: 20 }}>
+                            <CareerDetails
+                                changePage={changePage}
+                                selectedLeague={selectedLeague}
+                                selectedTeam={selectedTeam}
+                                apiLogo={apiLogo}
+                            />
+                        </section>
+                    </Fade>
+                    : <></>
+                }
+            </main>
+        </Fade>
     );
 }
