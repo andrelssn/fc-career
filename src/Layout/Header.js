@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import InfoIcon from '@mui/icons-material/Info';
+import ArticleIcon from '@mui/icons-material/Article';
 
 // img
 import img from "../Images/Logo/futebol (1).png";
@@ -100,6 +101,7 @@ export default function Header({ isMobile, page, setPage }) {
                     >
                         <Tab label="Página Inicial" value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                         <Tab label="Carreira" value={"career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                        <Tab label="Patrocinadores" value={"sponsors"} icon={<ArticleIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                         <Tab label="Informações" value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                     </Tabs>
                 </Box>
