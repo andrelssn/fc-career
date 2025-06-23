@@ -2,6 +2,7 @@ import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow }
 
 // Style
 import "./Style.css";
+import { Trans } from "react-i18next";
 
 export default function Achievements({ apiDetails }) {
     return (
@@ -10,7 +11,7 @@ export default function Achievements({ apiDetails }) {
                 <Table size="small">
                     <TableHead>
                         <TableCell sx={{ color: "var(--text-secondary)" }}>
-                            Achievement
+                            <Trans>Títulos</Trans>
                         </TableCell>
 
                         <TableCell align="center" sx={{ color: "var(--text-secondary)" }}>

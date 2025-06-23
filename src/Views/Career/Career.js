@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade, LinearProgress } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Style
 import "./Style.css";
@@ -36,7 +37,7 @@ export default function Career() {
     if (!apiLeagues) return (
         <Fade in={true}>
             <main className="career-container">
-                <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
+                <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
 
                 <LinearProgress
                     sx={{
@@ -55,7 +56,7 @@ export default function Career() {
     return (
         <Fade in={true}>
             <main className="career-container">
-                <TitlePage title={"Montar Carreira"} subtitle={"Selecione o time, verifique os objetivos e faça história!"}/>
+                <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
 
                 <LinearProgress
                     sx={{

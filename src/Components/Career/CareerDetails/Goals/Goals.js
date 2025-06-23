@@ -1,3 +1,4 @@
+import { Trans } from "react-i18next";
 import { Box, Rating, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
 // Style
@@ -10,11 +11,11 @@ export default function Goals({ apiDetails }) {
                 <Table size="small">
                     <TableHead>
                         <TableCell sx={{ color: "var(--text-secondary)" }}>
-                            Goal
+                            <Trans>Objetivo</Trans>
                         </TableCell>
 
                         <TableCell sx={{ color: "var(--text-secondary)" }}>
-                            Difficulty
+                            <Trans>Dificuldade</Trans>
                         </TableCell>
                     </TableHead>
 

@@ -2,6 +2,7 @@ import { Box, Rating, Table, TableBody, TableCell, TableContainer, TableHead, Ta
 
 // Style
 import "./Style.css";
+import { Trans } from "react-i18next";
 
 export default function ToWin({ apiDetails }) {
 
@@ -9,7 +10,7 @@ export default function ToWin({ apiDetails }) {
         return (
             <Box className="towin-section">
                 <Typography textAlign={"center"} pt={1} color="var(--text-secondary)" fontSize={14}>
-                    Este time já ganhou todos os títulos possíveis a ele.
+                    <Trans>Este time já ganhou todos os títulos possíveis a ele.</Trans>
                 </Typography>
             </Box>
         )
@@ -21,7 +22,7 @@ export default function ToWin({ apiDetails }) {
                 <Table size="small">
                     <TableHead>
                         <TableCell sx={{ color: "var(--text-secondary)" }}>
-                            To Win
+                            <Trans>A vencer</Trans>
                         </TableCell>
                     </TableHead>
 

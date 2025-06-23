@@ -1,5 +1,6 @@
 import React from "react";
 import { Autocomplete, Box, Button, CircularProgress, Fade, LinearProgress, TextField, Typography } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Styles
 import "./Style.css";
@@ -79,7 +80,7 @@ export default function SelectTeam(props) {
                     !selectedLeague || !selectedTeam
                         ? (
                             <Typography textAlign={"center"} color="var(--text-secondary)">
-                                Selecione um clube
+                                <Trans>Selecione um clube</Trans>
                             </Typography>
                         )
                         : (
@@ -104,7 +105,7 @@ export default function SelectTeam(props) {
                         <TextField
                             {...params}
                             variant="standard"
-                            label="Selecionar Liga"
+                            label={<Trans>Selecionar Liga</Trans>}
                         />
                     }
                     slotProps={{
@@ -133,7 +134,7 @@ export default function SelectTeam(props) {
                                     <TextField
                                         {...params}
                                         variant="standard"
-                                        label="Selecionar Clube"
+                                        label={<Trans>Selecionar Clube</Trans>}
                                     />
                                 }
                                 slotProps={{
@@ -156,7 +157,7 @@ export default function SelectTeam(props) {
                 onClick={() => changePage(2)}
                 sx={{ mt: 2 }}
             >
-                Confirmar
+                <Trans>Confirmar</Trans>
             </Button>
         </Box>
     );
