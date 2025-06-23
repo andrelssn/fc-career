@@ -77,7 +77,7 @@ export default function Home() {
                         }}
                     />
 
-                    <div>video</div>
+                    <div style={{ color: "var(--text-secondary)" }}>em breve</div>
                 </Box>
             </div>
         </Fade>
