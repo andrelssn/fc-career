@@ -1,5 +1,7 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 
+import './i18n';
+
 // Style
 import "./App.css";
 

@@ -1,3 +1,4 @@
+import { Trans } from "react-i18next";
 import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
 // Style
@@ -10,7 +11,7 @@ export default function Records({ apiDetails }) {
                 <Table size="small">
                     <TableHead>
                         <TableCell sx={{ color: "var(--text-secondary)" }}>
-                            Record
+                            <Trans>Recordes</Trans>
                         </TableCell>
                     </TableHead>
 

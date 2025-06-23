@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, CircularProgress, Fade, MenuItem, TextField, Typography } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Styles
 import "./Style.css";
@@ -62,14 +63,14 @@ export default function ChooseSponsor({ apiSponsors }){
         <Box className="choose-sponsor">
             <Box className="player-geral">
                 <Typography>
-                    Digite o geral de seu jogador
+                    <Trans>Digite o geral de seu jogador</Trans>
                 </Typography>
 
                 <TextField
                     fullWidth
                     size="small"
                     type="number"
-                    label="Geral (GER)"
+                    label={<Trans>Geral (GER)</Trans>}
                     slotProps={{
                         input: {
                             style: {
@@ -92,7 +93,7 @@ export default function ChooseSponsor({ apiSponsors }){
 
 
                 <Button onClick={() => getSponsors()} className="global-btn-style">
-                    Confirmar
+                    <Trans>Confirmar</Trans>
                 </Button>
             </Box>
 
@@ -120,7 +121,7 @@ export default function ChooseSponsor({ apiSponsors }){
                                     color="var(--text)"
                                     width={"100%"}
                                 >
-                                    Marca
+                                    <Trans>Marca</Trans>
                                 </Typography>
                             )
                             : (
@@ -139,7 +140,7 @@ export default function ChooseSponsor({ apiSponsors }){
                         key={key}
                         select
                         size="small"
-                        label="Patrocinador"
+                        label={<Trans>Patrocinador</Trans>}
                         onChange={(e) => getBrandLogo(e.target.value)}
                         slotProps={{
                             input: {

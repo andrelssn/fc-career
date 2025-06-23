@@ -5,13 +5,14 @@ import "./Style.css";
 
 // Img
 import fc25 from "../../Images/fc/fc25white.png";
+import { Trans } from "react-i18next";
 
 export default function Home() {
     return (
         <Fade in={true}>
             <div className="home-style">
                 <Typography variant="h5" color="var(--headline)">
-                    Bem-vindo!
+                    <Trans>Bem-vindo</Trans>!
                 </Typography>
 
                 <LinearProgress
@@ -26,23 +27,32 @@ export default function Home() {
                 />
 
                 <article className="article-style">
-                    <span>Você é aquele jogador de FC modo carreira que cansou de tentar ideias novas?</span><br/>
-                    <span>Então está no lugar certo!</span>
+                    <span>
+                        <Trans>Você é aquele jogador de FC modo carreira que cansou de tentar ideias novas?</Trans>
+                    </span><br/>
+
+                    <span>
+                        <Trans>Então está no lugar certo!</Trans>
+                    </span>
 
                     <p>
-                        Com o <span style={{ fontWeight: "bold" }}>FC Career</span> você poderá gerar uma ideia de modo carreira, no qual poderá selecionar a liga e equipe
-                        que deseja jogar, e com base na dificuldade da equipe, você terá objetivos especificos para alcançar na temporada com a mesma.
+                        <Trans>
+                           Com o FC Career, você poderá gerar uma ideia de Modo Carreira, na qual poderá selecionar a liga e a equipe que deseja jogar.
+                           Com base na dificuldade da equipe, você terá objetivos específicos para alcançar durante a temporada com ela.
+                        </Trans>
                     </p>
 
                     <p>
-                        Cada equipe tem seus objetivos já pré-definidos, também ao selecionar, mostraremos informações da equipe, conquistas, recordes, etc. Com a demonstração
-                        também de títulos a serem conquistados, e ambições cruciais do clube.
+                        <Trans>
+                            Cada equipe tem seus objetivos já pré-definidos. Ao selecioná-la, também exibiremos informações do clube, como conquistas, recordes, entre outros.
+                            Além disso, serão mostrados os títulos a serem conquistados e as ambições cruciais do clube.
+                        </Trans>
                     </p>
                 </article>
 
                 <Box mt={5}>
                     <Typography variant="h5" color="var(--headline)">
-                        Edições presentes
+                        <Trans>Edições presentes</Trans>
                     </Typography>
 
                     <LinearProgress
@@ -63,7 +73,7 @@ export default function Home() {
 
                 <Box mt={5}>
                     <Typography variant="h5" color="var(--headline)">
-                        Vídeo de Apresentação
+                        <Trans>Vídeo de Apresentação</Trans>
                     </Typography>
 
                     <LinearProgress
@@ -77,7 +87,9 @@ export default function Home() {
                         }}
                     />
 
-                    <div style={{ color: "var(--text-secondary)" }}>em breve</div>
+                    <div style={{ color: "var(--text-secondary)" }}>
+                        <Trans>em breve</Trans>
+                    </div>
                 </Box>
             </div>
         </Fade>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, CircularProgress, Collapse, IconButton, Rating, Typography } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Icons
 import TrackChangesIcon from '@mui/icons-material/TrackChanges';
@@ -105,7 +106,9 @@ export default function CareerDetails(props) {
                                 onClick={() => setOpenGoals(!openGoals)}
                             >
                                 <TrackChangesIcon sx={{ mr: 1 }}/>
-                                <span>Objetivos</span>
+                                <span>
+                                    <Trans>Objetivos</Trans>
+                                </span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 
@@ -120,7 +123,9 @@ export default function CareerDetails(props) {
                                 onClick={() => setOpenAchievements(!openAchievements)}
                             >
                                 <EmojiEventsIcon sx={{ mr: 1 }}/>
-                                <span>Títulos</span>
+                                <span>
+                                    <Trans>Títulos</Trans>
+                                </span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 
@@ -135,7 +140,9 @@ export default function CareerDetails(props) {
                                 onClick={() => setOpenRecords(!openRecords)}
                             >
                                 <StarIcon sx={{ mr: 1 }}/>
-                                <span>Recordes</span>
+                                <span>
+                                    <Trans>Recordes</Trans>
+                                </span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 
@@ -150,7 +157,9 @@ export default function CareerDetails(props) {
                                 onClick={() => setOpenToWin(!openToWin)}
                             >
                                 <HistoryToggleOffIcon sx={{ mr: 1 }}/>
-                                <span>A vencer</span>
+                                <span>
+                                    <Trans>A vencer</Trans>
+                                </span>
                                 <MenuIcon sx={{ position: "absolute", left: 10 }}/>
                             </Button>
 

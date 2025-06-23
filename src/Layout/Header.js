@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Typography } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Icons
 import MenuIcon from '@mui/icons-material/Menu';
@@ -10,6 +11,8 @@ import ArticleIcon from '@mui/icons-material/Article';
 
 // img
 import img from "../Images/Logo/futebol (1).png";
+// import br from "../Images/flags/brasil.png";
+import eua from "../Images/flags/eua.png";
 
 // Styles
 import "./Style.css";
@@ -81,29 +84,42 @@ export default function Header({ isMobile, page, setPage }) {
                         <span style={{ fontStyle: "italic", fontWeight: "bold", color: "var(--text)"  }}>FC Career</span>
                     </Typography>
 
-                    <Tabs
-                        value={page}
-                        onChange={handleChange}
-                        variant="scrollable"
-                        scrollButtons="auto"
-                        sx={{
-                            '& .MuiTabs-indicator': {
-                                backgroundColor: 'var(--orange) !important', // Cor do indicador
-                            },
-                            '& .MuiTab-root': {
-                                color: 'var(--text-secondary) !important', // Cor do texto das abas
-                                fontWeight: 'bold',
-                            },
-                            '& .Mui-selected': {
-                                color: 'var(--orange) !important', // Cor da aba selecionada
-                            },
-                        }}
-                    >
-                        <Tab label="Página Inicial" value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                        <Tab label="Carreira" value={"career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                        <Tab label="Patrocinadores" value={"sponsors"} icon={<ArticleIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                        <Tab label="Informações" value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                    </Tabs>
+                    <Box display={"flex"} alignItems={"center"}>
+                        <Tabs
+                            value={page}
+                            onChange={handleChange}
+                            variant="scrollable"
+                            scrollButtons="auto"
+                            sx={{
+                                '& .MuiTabs-indicator': {
+                                    backgroundColor: 'var(--orange) !important', // Cor do indicador
+                                },
+                                '& .MuiTab-root': {
+                                    color: 'var(--text-secondary) !important', // Cor do texto das abas
+                                    fontWeight: 'bold',
+                                },
+                                '& .Mui-selected': {
+                                    color: 'var(--orange) !important', // Cor da aba selecionada
+                                },
+                            }}
+                        >
+                            <Tab label={<Trans>Página Inicial</Trans>} value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                            <Tab label={<Trans>Carreira</Trans>} value={"career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                            <Tab label={<Trans>Patrocinadores</Trans>} value={"sponsors"} icon={<ArticleIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                            <Tab label={<Trans>Informações</Trans>} value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                        </Tabs>
+
+                        <IconButton
+                            size="small"
+                            sx={{
+                                height: 40,
+                                ml: 2
+                            }}
+                            onClick={() => alert('This system is only in English for now')}
+                        >
+                            <img alt="flag" src={eua} style={{ width: 25 }} />
+                        </IconButton>
+                    </Box>
                 </Box>
             )}
 

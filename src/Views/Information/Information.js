@@ -1,3 +1,4 @@
+import { Trans } from "react-i18next";
 import { Box, Button, Divider, Fade, LinearProgress, Typography } from "@mui/material";
 
 // Styles
@@ -10,7 +11,7 @@ export default function Information() {
     return (
         <Fade in={true}>
             <Box className='information-style'>
-                <TitlePage title={'Informações'} subtitle={'Informações úteis e contato'}/>
+                <TitlePage title={<Trans>Informações</Trans>} subtitle={<Trans>Informações úteis e contato</Trans>}/>
 
                 <LinearProgress
                     sx={{
@@ -25,28 +26,38 @@ export default function Information() {
 
                 <article className="article-box">
                     <span>
-                        Este projeto é uma aplicação de fã, criada de forma independente, sem fins comerciais.
-                        Todas as marcas registradas, logotipos, nomes e imagens relacionados a EA Sports, incluindo a franquia EA Sports FC, são propriedade de Electronic Arts Inc. e seus licenciadores.
+                        <Trans>
+                            Este projeto é uma aplicação de fã, criada de forma independente, sem fins comerciais.
+                            Todas as marcas registradas, logotipos, nomes e imagens relacionados a EA Sports, incluindo a franquia EA Sports FC, são propriedade de Electronic Arts Inc. e seus licenciadores.
+                        </Trans>
                     </span>
 
-                    <br/>
+                    <br/><br/>
 
-                    <span>Nenhum conteúdo deste projeto é patrocinado, endossado ou administrado por EA Sports.</span>
+                    <span>
+                        <Trans>Nenhum conteúdo deste projeto é patrocinado, endossado ou administrado por EA Sports.</Trans>
+                    </span>
                 </article>
 
                 <article className="article-box">
-                    <span>Direitos autorais e marcas pertencem aos seus respectivos proprietários.</span>
-
                     <span>
-                        Este projeto é uma aplicação de fã, criada de forma independente e sem fins lucrativos, com o único propósito de homenagear e celebrar o futebol.
-                        Todas as marcas registradas, logotipos, nomes, uniformes, escudos e demais elementos visuais relacionados a clubes, seleções e organizações de futebol são propriedade de seus respectivos detentores de direitos.
+                        <Trans>Direitos autorais e marcas pertencem aos seus respectivos proprietários.</Trans>
                     </span>
 
-                    <br/>
+                    <span>
+                        <Trans>
+                            Este projeto é uma aplicação de fã, criada de forma independente e sem fins lucrativos, com o único propósito de homenagear e celebrar o futebol.
+                            Todas as marcas registradas, logotipos, nomes, uniformes, escudos e demais elementos visuais relacionados a clubes, seleções e organizações de futebol são propriedade de seus respectivos detentores de direitos.
+                        </Trans>
+                    </span>
+
+                    <br/><br/>
 
                     <span>
-                        As imagens, nomes e informações utilizadas sobre times de futebol foram obtidas a partir de fontes públicas e têm caráter meramente ilustrativo e informativo.
-                        Nenhum conteúdo deste projeto é patrocinado, endossado ou administrado por clubes, federações, ligas ou qualquer outra entidade oficial do futebol.
+                        <Trans>
+                            As imagens, nomes e informações utilizadas sobre times de futebol foram obtidas a partir de fontes públicas e têm caráter meramente ilustrativo e informativo.
+                            Nenhum conteúdo deste projeto é patrocinado, endossado ou administrado por clubes, federações, ligas ou qualquer outra entidade oficial do futebol.
+                        </Trans>
                     </span>
                 </article>
 
@@ -54,11 +65,11 @@ export default function Information() {
 
                 <Box>
                     <Typography variant="h6" color="var(--text)">
-                        Deseja enviar sugestões ou conversar sobre outros assuntos?
+                        <Trans>Deseja enviar sugestões ou conversar sobre outros assuntos?</Trans>
                     </Typography>
 
                     <Typography sx={{ fontStyle: "italic", color: "var(--text-secondary)" }}>
-                        Entre em contato
+                        <Trans>Entre em contato</Trans>
                     </Typography>
 
                     <Button
@@ -66,7 +77,7 @@ export default function Information() {
                         href="mailto:andreluissilsan22@gmail.com"
                         className="global-btn-style"
                     >
-                        Enviar Email
+                        <Trans>Enviar Email</Trans>
                     </Button>
                 </Box>
             </Box>

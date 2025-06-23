@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Fade, LinearProgress } from "@mui/material";
+import { Trans } from "react-i18next";
 
 // Style
 import "./Style.css";
@@ -27,7 +28,7 @@ export default function Sponsors() {
     if (!apiSponsors) return (
         <Fade in={true}>
             <main className="career-container">
-                <TitlePage title={'Patrocinadores (Beta)'} subtitle={'Aqui você poderá escolher o patrocinador para seu jogador do modo carreira, com base em seu geral (GER)'}/>
+                <TitlePage title={<Trans>Patrocinadores (Beta)</Trans>} subtitle={<Trans>Aqui você poderá escolher o patrocinador para seu jogador do modo carreira, com base em seu geral (GER)</Trans>}/>
 
                 <LinearProgress
                     sx={{
@@ -46,7 +47,7 @@ export default function Sponsors() {
     return (
         <Fade in={true}>
             <Box className="sponsors-container">
-                <TitlePage title={'Patrocinadores (Beta)'} subtitle={'Aqui você poderá escolher o patrocinador para seu jogador do modo carreira, com base em seu geral (GER)'}/>
+                <TitlePage title={<Trans>Patrocinadores (Beta)</Trans>} subtitle={<Trans>Aqui você poderá escolher o patrocinador para seu jogador do modo carreira, com base em seu geral (GER)</Trans>}/>
 
                 <LinearProgress
                     sx={{
