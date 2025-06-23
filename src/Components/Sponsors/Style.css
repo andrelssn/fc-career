@@ -1,24 +1,25 @@
 .choose-sponsor {
-    position: relative !important;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto !important;
     margin-top: 20px !important;
 }
 
 .player-geral {
     display: grid;
-    max-height: 150px;
-    width: 20%;
+    height: 2%;
     padding: 20px;
+    margin-right: 20px;
     background: linear-gradient(var(--theme), var(--theme-dark));
     border-radius: 15px;
 }
 
 .brand {
+    flex: 1 !important;
+    position: relative;
+    width: 100%;
     display: grid;
     justify-content: center;
-    width: 75%;
     padding-top: 30px;
     background: linear-gradient(var(--theme), var(--theme-dark));
     border-radius: 15px;
@@ -26,10 +27,22 @@
 
 .brand-logo-box {
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     margin-bottom: 20px;
     background: linear-gradient(var(--orange), var(--orange2));
     border-radius: 100%;
 }
 
+@media (max-width: 768px) {
+	.player-geral {
+	    display: grid;
+        width: 100%;
+        height: 2%;
+        padding: 20px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        background: linear-gradient(var(--theme), var(--theme-dark));
+        border-radius: 15px;
+	}
+}

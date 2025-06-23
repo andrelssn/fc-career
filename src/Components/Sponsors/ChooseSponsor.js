@@ -46,6 +46,7 @@ export default function ChooseSponsor({ apiSponsors }){
 
     async function getBrandLogo(value) {
         setLoaderLogo(true);
+        setApiLogo(null);
 
         await getDataIgm(`/sponsors/logo/${value}`).then(response => {
             if(response.status === 200){
@@ -124,8 +125,8 @@ export default function ChooseSponsor({ apiSponsors }){
                             )
                             : (
                                 <Fade in={true}>
-                                    <div style={{ width: 200, margin: "auto" }}>
-                                        <img alt="team-logo" src={apiLogo} style={{ width: 200 }}/>
+                                    <div style={{ width: 160, margin: "auto" }}>
+                                        <img alt="team-logo" src={apiLogo} style={{ width: 160 }}/>
                                     </div>
                                 </Fade>
                             )

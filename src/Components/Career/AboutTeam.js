@@ -28,18 +28,42 @@ export default function AboutTeam(props) {
 
             <Box display={"flex"}>
                 <Box sx={{ color: "var(--orange)", mt: 1 }}>
-                    <span style={{ color: "var(--text)" }}>Cidade</span> {selectedTeam.data.City}<br/>
-                    <span style={{ color: "var(--text)" }}>Estádio</span> {selectedTeam.data.Stadium}<br/>
-                    <span style={{ color: "var(--text)" }}>Fundação</span> {selectedTeam.data.Foundation}
+                    <div style={{ marginBottom: "5px" }}>
+                        <span style={{ color: "var(--text)", marginBottom: "5px" }}>
+                            Cidade
+                        </span> {selectedTeam.data.City}
+                    </div>
+
+                    <div style={{ marginBottom: "5px" }}>
+                        <span style={{ color: "var(--text)", marginBottom: "5px" }}>
+                            Estádio
+                        </span> {selectedTeam.data.Stadium}
+                    </div>
+
+                    <div style={{ marginBottom: "5px" }}>
+                        <span style={{ color: "var(--text)" }}>
+                            Fundação
+                        </span> {selectedTeam.data.Foundation}
+                    </div>
                 </Box>
 
                 <Box sx={{ color: "var(--orange)", mt: 1, ml: 2 }}>
-                    <div style={{ display: "flex" }}>
+                    <div style={{ display: "flex", marginBottom: "5px" }}>
                         <span style={{ color: "var(--text)" }}>Tamanho do Time</span>
                         <Rating name="read-only" sx={{ fontSize: 18, ml: 1 }} value= {selectedTeam.data.Size} readOnly />
                     </div>
-                    <span style={{ color: "var(--text)" }}>Artilheiro</span> {selectedTeam.data.Goalscorer}<br/>
-                    <span style={{ color: "var(--text)" }}>Maior número de gols</span> {selectedTeam.data.Goalscorer_Total}
+
+                    <div style={{ marginBottom: "5px" }}>
+                        <span style={{ color: "var(--text)", marginBottom: "5px" }}>
+                            Artilheiro
+                        </span> {selectedTeam.data.Goalscorer}
+                    </div>
+
+                    <div style={{ marginBottom: "5px" }}>
+                        <span style={{ color: "var(--text)" }}>
+                            Maior número de gols
+                        </span> {selectedTeam.data.Goalscorer_Total}
+                    </div>
                 </Box>
             </Box>
 

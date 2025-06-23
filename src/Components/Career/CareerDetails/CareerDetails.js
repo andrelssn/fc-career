@@ -52,8 +52,8 @@ export default function CareerDetails(props) {
                 <ArrowBackIcon sx={{ color: "var(--orange)" }}/>
             </IconButton>
 
-            <Box display={"flex"}>
-                <Box>
+            <Box display={"flex"} flexWrap={"wrap"}>
+                <Box mb={2}>
                     <Box className="team-basic-information">
                         <div style={{ width: 300, margin: "auto" }}>
                             <img alt="team-logo" src={apiLogo} style={{ width: 300 }}/>
@@ -97,7 +97,7 @@ export default function CareerDetails(props) {
                 { !apiDetails
                     ? ( <CircularProgress sx={{ margin: "auto", color: "var(--orange)" }}/> )
                     : (
-                        <Box ml={1} sx={{ width: "100%" }}>
+                        <Box ml={1} flex={1}>
                             <Button
                                 className="global-btn-style"
                                 fullWidth
