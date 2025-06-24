@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, LinearProgress } from "@mui/material";
+import { Fade, LinearProgress, Typography } from "@mui/material";
 import { Trans } from "react-i18next";
 
 // Style
@@ -68,6 +68,10 @@ export default function Career() {
                         mt: "15px"
                     }}
                 />
+
+                <Typography fontSize={14} textAlign={"center"} mt={2}>
+                    Only premier league for this version
+                </Typography>
 
                 { page === 1
                     ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
