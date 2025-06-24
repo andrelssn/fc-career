@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Bem-Vindo ao FC Career Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto criado para fãs de EA Sports FC, em que o jogador poderá ter novas ideias de modo carreira no jogo.
 
-## Available Scripts
+Com o FC Career, você poderá gerar uma ideia de Modo Carreira, na qual poderá selecionar a liga e a equipe que deseja jogar.
+Com base na dificuldade da equipe, você terá objetivos específicos para alcançar durante a temporada com ela.
 
-In the project directory, you can run:
+Cada equipe tem seus objetivos já pré-definidos. Ao selecioná-la, também exibiremos informações do clube, como conquistas, recordes, entre outros.
+Além disso, serão mostrados os títulos a serem conquistados e as ambições cruciais do clube.
 
-### `npm start`
+## Link Produção
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://carreira-fc-project-delta.vercel.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+Para o desenvolvimento do sistema foi utilizado:
+ - React.js
+ - Node
+ - Material UI
+ - i18n
+ - React Router Dom
+ - Visual Studio Code
+ - Vercel (PROD)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalação
 
-### `npm run build`
+Para rodar o projeto localmente, recomendamos utilizar o Visual Studio Code com o terminal embutido.
+Também é de extrema importância ter Node com NPM instalado no seu sistema.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ao abrir o projeto no seu ambiente, deverá rodar o seguinte comando para instalação dos pacotes.
+`npm install --legacy-peer-deps`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Após instalado todas as libs, descomente o arquivo `.envdev` e acrescente a URL da api rodando localmente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+E por último, basta rodar o comando `npm start` e o sistema estará pronto para utilização!
