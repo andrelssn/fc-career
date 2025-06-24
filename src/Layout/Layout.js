@@ -13,6 +13,10 @@ import Header from "./Header";
 export default function Layout({ isMobile }) {
     const [page, setPage] = React.useState("/");
 
+    function updateKeyHeader(value) {
+        setPage(value);
+    };
+
     return (
         <div className="app-container">
             <Header isMobile={isMobile} page={page} setPage={setPage}/>
@@ -20,7 +24,7 @@ export default function Layout({ isMobile }) {
             <main className="main-content">
                 <Paper className="page-style">
                     <BrowserRouter>
-                        <MainRouter page={page}/>
+                        <MainRouter page={page} updateKeyHeader={updateKeyHeader}/>
                     </BrowserRouter>
                 </Paper>
             </main>

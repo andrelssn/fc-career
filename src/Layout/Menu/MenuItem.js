@@ -13,17 +13,17 @@ export const menuList = [
     },
     {
         label: <Trans>Carreira</Trans>,
-        route: "career",
+        route: "/career",
         icon: AutoAwesomeIcon
     },
     {
-        label: <Trans>Patrocinadores</Trans>,
-        route: "sponsors",
+        label: <Trans>Sponsors (BETA)</Trans>,
+        route: "/sponsors",
         icon: ArticleIcon
     },
     {
         label: <Trans>Informações</Trans>,
-        route: "information",
+        route: "/information",
         icon: InfoIcon
     },
 ]

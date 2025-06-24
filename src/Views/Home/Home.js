@@ -1,3 +1,5 @@
+import React from "react";
+import { Trans } from "react-i18next";
 import { Box, Fade, LinearProgress, Typography } from "@mui/material";
 
 // Style
@@ -5,9 +7,12 @@ import "./Style.css";
 
 // Img
 import fc25 from "../../Images/fc/fc25white.png";
-import { Trans } from "react-i18next";
 
-export default function Home() {
+export default function Home({ updateKeyHeader }) {
+    React.useEffect(() => {
+        updateKeyHeader(window.location.pathname.substring(0));
+    }, []);
+
     return (
         <Fade in={true}>
             <div className="home-style">

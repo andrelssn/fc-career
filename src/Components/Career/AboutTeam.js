@@ -1,8 +1,8 @@
+import { Trans } from "react-i18next";
 import { Box, Divider, Rating, Typography } from "@mui/material";
 
 // Style
 import "./Style.css";
-import { Trans } from "react-i18next";
 
 export default function AboutTeam(props) {
     const {
