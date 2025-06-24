@@ -1,0 +1,15 @@
+.information-style {
+    position: relative;
+    padding: 20px !important;
+}
+
+.article-box {
+    margin: 20px 5px;
+    padding: 10px;
+    background-color: var(--theme);
+    border-radius: 10px;
+}
+
+.article-box span {
+    color: var(--text-secondary);
+}

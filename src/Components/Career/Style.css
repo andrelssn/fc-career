@@ -1,0 +1,24 @@
+.select-team-container {
+    display: grid;
+    padding: 20px 40px !important;
+}
+
+.team-logo-box {
+    position: relative;
+    align-content: center;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+    background: linear-gradient(#383838, #1b1b1b);
+    box-shadow: 0px 0px 7px 0px var(--orange);
+}
+
+.about-container {
+    flex: 1 !important;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(var(--theme), var(--theme-dark));
+    border-radius: 15px;
+}

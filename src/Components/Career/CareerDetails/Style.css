@@ -1,0 +1,10 @@
+.career-details-container {
+    position: relative;
+    width: 100%;
+}
+
+.team-basic-information {
+    padding: 10px;
+    background-color: var(--theme-dark) !important;
+    border-radius: 10px;
+}

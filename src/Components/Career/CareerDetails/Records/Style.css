@@ -1,0 +1,13 @@
+.records-section {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--theme) !important;
+    border-radius: 5px;
+}
+
+.table-records {
+    width: 98%;
+    margin: auto;
+}
