@@ -14,10 +14,12 @@ import { getData } from "../../Services/Api";
 // Components
 import ChooseSponsor from "../../Components/Sponsors/ChooseSponsor";
 
-export default function Sponsors() {
+export default function Sponsors({ updateKeyHeader }) {
     const [apiSponsors, setApiSponsors] = React.useState(null);
 
     React.useEffect(() => {
+        updateKeyHeader(window.location.pathname.substring(0));
+
         getData('/sponsors').then(response => {
             if(response.status === 200){
                 setApiSponsors(response.data);

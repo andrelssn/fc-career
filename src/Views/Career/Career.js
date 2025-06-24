@@ -14,7 +14,7 @@ import CareerDetails from "../../Components/Career/CareerDetails/CareerDetails";
 // Services
 import { getData } from "../../Services/Api";
 
-export default function Career() {
+export default function Career({ updateKeyHeader }) {
     const [page, setPage]                     = React.useState(1);
     const [apiLeagues, setApiLeagues]         = React.useState(null);
     const [apiTeams, setApiTeams]             = React.useState(null);
@@ -23,11 +23,13 @@ export default function Career() {
     const [selectedTeam, setSelectedTeam]     = React.useState(null);
 
     React.useEffect(() => {
+        updateKeyHeader(window.location.pathname.substring(0));
+
         getData('/leagues').then(response => {
             if(response.status === 200){
                 setApiLeagues(response.data);
             }
-        })
+        });
     }, []);
 
     function changePage(value) {

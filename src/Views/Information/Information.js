@@ -1,3 +1,4 @@
+import React from "react";
 import { Trans } from "react-i18next";
 import { Box, Button, Divider, Fade, LinearProgress, Typography } from "@mui/material";
 
@@ -7,7 +8,11 @@ import './Style.css';
 // Components
 import TitlePage from "../../Components/TitlePage/TitlePage";
 
-export default function Information() {
+export default function Information({updateKeyHeader}) {
+    React.useEffect(() => {
+        updateKeyHeader(window.location.pathname.substring(0));
+    }, []);
+
     return (
         <Fade in={true}>
             <Box className='information-style'>

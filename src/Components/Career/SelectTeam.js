@@ -11,7 +11,7 @@ import { getData, getDataIgm } from "../../Services/Api";
 
 export default function SelectTeam(props) {
     const {
-        apiLeagues,
+        // apiLeagues,
         apiTeams,
         setApiTeams,
         apiLogo,
