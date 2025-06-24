@@ -11,7 +11,7 @@ import { getData, getDataIgm } from "../../Services/Api";
 
 export default function SelectTeam(props) {
     const {
-        apiLeagues,
+        // apiLeagues,
         apiTeams,
         setApiTeams,
         apiLogo,
@@ -63,7 +63,8 @@ export default function SelectTeam(props) {
         setLoaderLogo(false);
     };
 
-    const optionsLeague = apiLeagues.map((data) => ({ value: data.id, label: data.name, country: data.country, division: data.division, difficulty: data.difficulty }));
+    // const optionsLeague = apiLeagues.map((data) => ({ value: data.id, label: data.name, country: data.country, division: data.division, difficulty: data.difficulty }));
+    const optionsLeague = [{ value: 1, label: "Premier League" }];
     const optionsTeams  = apiTeams && apiTeams.map((data) => ({ value: data.Id, label: data.Name, data: data }));
 
     return (

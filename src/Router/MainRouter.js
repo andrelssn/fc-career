@@ -7,7 +7,7 @@ import React from "react";
 import Information from "../Views/Information/Information";
 import Sponsors from "../Views/Sponsors/Sponsors";
 
-export default function MainRouter({ page }) {
+export default function MainRouter({ page, updateKeyHeader }) {
 
     const navigate = useNavigate();
 
@@ -17,10 +17,10 @@ export default function MainRouter({ page }) {
 
     return (
         <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/career" element={<Career/>}/>
-            <Route path="/sponsors" element={<Sponsors/>}/>
-            <Route path="/information" element={<Information/>}/>
+            <Route path="/" element={<Home updateKeyHeader={updateKeyHeader}/>}/>
+            <Route path="/career" element={<Career updateKeyHeader={updateKeyHeader}/>}/>
+            <Route path="/sponsors" element={<Sponsors updateKeyHeader={updateKeyHeader}/>}/>
+            <Route path="/information" element={<Information updateKeyHeader={updateKeyHeader}/>}/>
         </Routes>
     );
 };

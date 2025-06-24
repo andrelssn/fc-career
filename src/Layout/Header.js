@@ -44,6 +44,7 @@ export default function Header({ isMobile, page, setPage }) {
                         return (
                             <ListItemButton
                                 onClick={() => handleChange('', item.route)}
+                                disabled={item.route === "/sponsors" ? true : false}
                                 className={page === item.route ? "selected-page-item" : "header-menu-item"}
                             >
                                 <ListItemIcon sx={{ color: "var(--text)" }}>
@@ -95,7 +96,7 @@ export default function Header({ isMobile, page, setPage }) {
                                     backgroundColor: 'var(--orange) !important', // Cor do indicador
                                 },
                                 '& .MuiTab-root': {
-                                    color: 'var(--text-secondary) !important', // Cor do texto das abas
+                                    color: 'var(--text-secondary)', // Cor do texto das abas
                                     fontWeight: 'bold',
                                 },
                                 '& .Mui-selected': {
@@ -104,9 +105,9 @@ export default function Header({ isMobile, page, setPage }) {
                             }}
                         >
                             <Tab label={<Trans>Página Inicial</Trans>} value={"/"} icon={<HomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                            <Tab label={<Trans>Carreira</Trans>} value={"career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                            <Tab label={<Trans>Patrocinadores</Trans>} value={"sponsors"} icon={<ArticleIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
-                            <Tab label={<Trans>Informações</Trans>} value={"information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                            <Tab label={<Trans>Carreira</Trans>} value={"/career"} icon={<AutoAwesomeIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
+                            <Tab disabled label={<Trans>Sponsors (BETA)</Trans>} value={"/sponsors"} icon={<ArticleIcon/>} iconPosition="start" sx={{ fontSize: 12, color: "var(--off) !important" }}/>
+                            <Tab label={<Trans>Informações</Trans>} value={"/information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                         </Tabs>
 
                         <IconButton
