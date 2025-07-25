@@ -70,10 +70,10 @@ export default function Career({ updateKeyHeader }) {
                         mt: "15px"
                     }}
                 />
-
+{/* 
                 <Typography fontSize={14} textAlign={"center"} mt={2}>
                     Only premier league for this version
-                </Typography>
+                </Typography> */}
 
                 { page === 1
                     ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
