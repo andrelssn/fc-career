@@ -41,7 +41,7 @@ export default function Career({ updateKeyHeader }) {
             <main className="career-container">
                 <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
 
-                <LinearProgress
+                {/* <LinearProgress
                     sx={{
                         height: "1px",
                         backgroundColor: 'var(--background)',
@@ -50,7 +50,9 @@ export default function Career({ updateKeyHeader }) {
                         },
                         mt: "15px"
                     }}
-                />
+                /> */}
+                <br/>
+                <span>System in maintence..</span>
             </main>
         </Fade>
     );
