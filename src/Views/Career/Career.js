@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, LinearProgress, Typography } from "@mui/material";
+import { Fade, LinearProgress } from "@mui/material";
 import { Trans } from "react-i18next";
 
 // Style
@@ -36,7 +36,8 @@ export default function Career({ updateKeyHeader }) {
         setPage(value);
     }
 
-    if (!apiLeagues) return (
+    // if (!apiLeagues) return (
+    return (
         <Fade in={true}>
             <main className="career-container">
                 <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
@@ -51,68 +52,65 @@ export default function Career({ updateKeyHeader }) {
                         mt: "15px"
                     }}
                 /> */}
-                <br/>
-                <span>System in maintence..</span>
+
+                <span>System in maintence...</span>
+
             </main>
         </Fade>
     );
 
-    return (
-        <Fade in={true}>
-            <main className="career-container">
-                <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
+    // return (
+    //     <Fade in={true}>
+    //         <main className="career-container">
+    //             <TitlePage title={<Trans>Montar Carreira</Trans>} subtitle={<Trans>Selecione o time, verifique os objetivos e faça história!</Trans>}/>
 
-                <LinearProgress
-                    sx={{
-                        height: "1px",
-                        backgroundColor: 'var(--orange)',
-                        '& .MuiLinearProgress-bar': {
-                            backgroundColor: '#ec7869'
-                        },
-                        mt: "15px"
-                    }}
-                />
-{/* 
-                <Typography fontSize={14} textAlign={"center"} mt={2}>
-                    Only premier league for this version
-                </Typography> */}
+    //             <LinearProgress
+    //                 sx={{
+    //                     height: "1px",
+    //                     backgroundColor: 'var(--orange)',
+    //                     '& .MuiLinearProgress-bar': {
+    //                         backgroundColor: '#ec7869'
+    //                     },
+    //                     mt: "15px"
+    //                 }}
+    //             />
 
-                { page === 1
-                    ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
-                        <SelectTeam
-                            apiLeagues={apiLeagues}
-                            apiTeams={apiTeams}
-                            setApiTeams={setApiTeams}
-                            apiLogo={apiLogo}
-                            setApiLogo={setApiLogo}
-                            selectedLeague={selectedLeague}
-                            setSelectedLeague={setSelectedLeague}
-                            selectedTeam={selectedTeam}
-                            setSelectedTeam={setSelectedTeam}
-                            changePage={changePage}
-                        />
+    //             { page === 1
+    //                 ?  <section style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
+    //                     <SelectTeam
+    //                         apiLeagues={apiLeagues}
+    //                         apiTeams={apiTeams}
+    //                         setApiTeams={setApiTeams}
+    //                         apiLogo={apiLogo}
+    //                         setApiLogo={setApiLogo}
+    //                         selectedLeague={selectedLeague}
+    //                         setSelectedLeague={setSelectedLeague}
+    //                         selectedTeam={selectedTeam}
+    //                         setSelectedTeam={setSelectedTeam}
+    //                         changePage={changePage}
+    //                     />
 
-                        <AboutTeam
-                            selectedTeam={selectedTeam}
-                        />
-                    </section>
-                    : <></>
-                }
+    //                     <AboutTeam
+    //                         selectedTeam={selectedTeam}
+    //                     />
+    //                 </section>
+    //                 : <></>
+    //             }
 
-                { page === 2
-                    ?  <Fade in={true}>
-                        <section style={{ display: "flex", marginTop: 20 }}>
-                            <CareerDetails
-                                changePage={changePage}
-                                selectedLeague={selectedLeague}
-                                selectedTeam={selectedTeam}
-                                apiLogo={apiLogo}
-                            />
-                        </section>
-                    </Fade>
-                    : <></>
-                }
-            </main>
-        </Fade>
-    );
+    //             { page === 2
+    //                 ?  <Fade in={true}>
+    //                     <section style={{ display: "flex", marginTop: 20 }}>
+    //                         <CareerDetails
+    //                             changePage={changePage}
+    //                             selectedLeague={selectedLeague}
+    //                             selectedTeam={selectedTeam}
+    //                             apiLogo={apiLogo}
+    //                         />
+    //                     </section>
+    //                 </Fade>
+    //                 : <></>
+    //             }
+    //         </main>
+    //     </Fade>
+    // );
 }

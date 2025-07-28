@@ -56,8 +56,8 @@ export default function CareerDetails(props) {
             <Box display={"flex"} flexWrap={"wrap"} position={"relative"} overflow={"auto"}>
                 <Box className="team-information-box">
                     <Box className="team-basic-information">
-                        <div style={{ width: 300, margin: "auto" }}>
-                            <img alt="team-logo" src={apiLogo} style={{ width: 300 }}/>
+                        <div style={{ display: "flex", justifyContent: "center", width: 300, padding: "20px 0px" }}>
+                            <img alt="team-logo" src={apiLogo} style={{ width: 150 }}/>
                         </div>
 
                         <Box display={"grid"} textAlign={"center"}>
