@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs, Typography } from "@mui/material";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 // Icons
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,7 +11,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 
 // img
 import img from "../Images/Logo/futebol (1).png";
-// import br from "../Images/flags/brasil.png";
+import br from "../Images/flags/brasil.png";
 import eua from "../Images/flags/eua.png";
 
 // Styles
@@ -21,7 +21,17 @@ import "./Style.css";
 import { menuList } from "./Menu/MenuItem";
 
 export default function Header({ isMobile, page, setPage }) {
-    const [drawerOpen, setDrawerOpen] = React.useState(false);
+    const { i18n: {changeLanguage, language} }  = useTranslation();
+    const [drawerOpen, setDrawerOpen]           = React.useState(false);
+    const [currentLanguage, setCurrentLanguage] = React.useState(language);
+
+    const handleChangeLanguage = () => {
+        const newLanguage = currentLanguage === "en" ? "pt" : "en";
+
+        localStorage.setItem("language", newLanguage);
+        setCurrentLanguage(newLanguage);
+        changeLanguage(newLanguage);
+    }
 
     const toggleDrawer = (open) => () => {
         setDrawerOpen(open);
@@ -56,6 +66,41 @@ export default function Header({ isMobile, page, setPage }) {
                         );
                     })}
                 </List>
+
+                <Box sx={{ position: "absolute", bottom: 5 }}>
+                    {
+                        currentLanguage === "en"
+                        ? (
+                            <IconButton
+                                size="small"
+                                sx={{
+                                    height: 40,
+                                    ml: 2
+                                }}
+                                onClick={() => handleChangeLanguage()}
+                            >
+                                <img alt="flag" src={eua} style={{ width: 25 }} />
+                                <span style={{ color: "var(--text)", fontSize: 14, marginLeft: 5 }}>
+                                    Switch Language
+                                </span>
+                            </IconButton>
+                        ) : (
+                            <IconButton
+                                size="small"
+                                sx={{
+                                    height: 40,
+                                    ml: 2,
+                                }}
+                                onClick={() => handleChangeLanguage()}
+                            >
+                                <img alt="flag" src={br} style={{ width: 25 }} />
+                                <span style={{ color: "var(--text)", fontSize: 14, marginLeft: 5 }}>
+                                    Mudar Idioma
+                                </span>
+                            </IconButton>
+                        )
+                    }
+                </Box>
             </Box>
         </Drawer>
     );
@@ -110,16 +155,32 @@ export default function Header({ isMobile, page, setPage }) {
                             <Tab label={<Trans>Informações</Trans>} value={"/information"} icon={<InfoIcon/>} iconPosition="start" sx={{ fontSize: 12 }}/>
                         </Tabs>
 
-                        <IconButton
-                            size="small"
-                            sx={{
-                                height: 40,
-                                ml: 2
-                            }}
-                            onClick={() => alert('This system is only in English for now')}
-                        >
-                            <img alt="flag" src={eua} style={{ width: 25 }} />
-                        </IconButton>
+                        {
+                            currentLanguage === "en"
+                            ? (
+                                <IconButton
+                                    size="small"
+                                    sx={{
+                                        height: 40,
+                                        ml: 2
+                                    }}
+                                    onClick={() => handleChangeLanguage()}
+                                >
+                                    <img alt="flag" src={eua} style={{ width: 25 }} />
+                                </IconButton>
+                            ) : (
+                                <IconButton
+                                    size="small"
+                                    sx={{
+                                        height: 40,
+                                        ml: 2
+                                    }}
+                                    onClick={() => handleChangeLanguage()}
+                                >
+                                    <img alt="flag" src={br} style={{ width: 25 }} />
+                                </IconButton>
+                            )
+                        }
                     </Box>
                 </Box>
             )}
