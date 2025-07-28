@@ -33,6 +33,7 @@ export default function SelectTeam(props) {
             await getData(`/teams/${league.value}`).then(response => {
                 if(response.status === 200){
                     setApiTeams(response.data.data.Teams)
+                    console.log(response)
                 }
             });
         } else {

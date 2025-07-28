@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Box, Fade, LinearProgress, Typography } from "@mui/material";
 
 // Style
@@ -9,6 +9,8 @@ import "./Style.css";
 import fc25 from "../../Images/fc/fc25white.png";
 
 export default function Home({ updateKeyHeader }) {
+    useTranslation(); // Para atualizar estado de tradução da pagina
+
     React.useEffect(() => {
         updateKeyHeader(window.location.pathname.substring(0));
     }, []);
