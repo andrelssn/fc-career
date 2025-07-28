@@ -11,7 +11,6 @@
     height: 250px;
     margin-bottom: 30px;
     background: linear-gradient(#383838, #1b1b1b);
-    box-shadow: 0px 0px 7px 0px var(--orange);
 }
 
 .about-container {

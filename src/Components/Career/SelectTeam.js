@@ -64,7 +64,6 @@ export default function SelectTeam(props) {
     };
 
     const optionsLeague = apiLeagues.map((data) => ({ value: data.id, label: data.name, country: data.country, division: data.division, difficulty: data.difficulty }));
-    // const optionsLeague = [{ value: 1, label: "Premier League" }];
     const optionsTeams  = apiTeams && apiTeams.map((data) => ({ value: data.Id, label: data.Name, data: data }));
 
     return (
@@ -86,8 +85,8 @@ export default function SelectTeam(props) {
                         )
                         : (
                             <Fade in={true}>
-                                <div style={{ width: 200, margin: "auto" }}>
-                                    <img alt="team-logo" src={apiLogo} style={{ width: 200 }}/>
+                                <div style={{ display: "flex", justifyContent: "center"}}>
+                                    <img alt="team-logo" src={apiLogo} style={{ width: 150 }}/>
                                 </div>
                             </Fade>
                         )
