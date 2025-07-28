@@ -1,10 +1,12 @@
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Box, Rating, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
 // Style
 import "./Style.css";
 
 export default function Goals({ apiDetails }) {
+    const { i18n: { language } } = useTranslation();
+
     return (
         <Box className="goals-section">
             <TableContainer className="table-goals">
@@ -24,7 +26,7 @@ export default function Goals({ apiDetails }) {
                             return (
                                 <TableRow>
                                     <TableCell sx={{ color: "var(--text)" }}>
-                                        {data.goal}
+                                        { language === 'en' ? data.goal : data.goal_ptbr}
                                     </TableCell>
 
                                     <TableCell>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Box, Button, Divider, Fade, LinearProgress, Typography } from "@mui/material";
 
 // Styles
@@ -9,6 +9,8 @@ import './Style.css';
 import TitlePage from "../../Components/TitlePage/TitlePage";
 
 export default function Information({updateKeyHeader}) {
+    useTranslation(); // Para atualizar estado de tradução da pagina
+
     React.useEffect(() => {
         updateKeyHeader(window.location.pathname.substring(0));
     }, []);

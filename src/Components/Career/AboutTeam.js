@@ -1,4 +1,4 @@
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Box, Divider, Rating, Typography } from "@mui/material";
 
 // Style
@@ -8,6 +8,8 @@ export default function AboutTeam(props) {
     const {
         selectedTeam
     } = props;
+
+    const { i18n: { language } } = useTranslation();
 
     if(!selectedTeam) return (
         <Box className="about-container">
@@ -72,7 +74,7 @@ export default function AboutTeam(props) {
 
             <Box bgcolor={"var(--theme-dark)"} borderRadius={"10px"} p={"2px 20px"} mt={2}>
                 <p>
-                    {selectedTeam.data.History}
+                    {language === 'pt' ? selectedTeam.data.History_PTBR : selectedTeam.data.History}
                 </p>
             </Box>
         </Box>
